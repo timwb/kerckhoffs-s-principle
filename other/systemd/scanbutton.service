@@ -1,0 +1,13 @@
+[Unit]
+Description=Scanner button daemon
+After=multi-user.target
+
+[Service]
+Type=forking
+WorkingDirectory=/tmp
+ExecStart=scanbutton.py
+ExecStartPost=/bin/sleep 1
+PIDFile=/var/run/scanbutton.pid
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=Buitenlamp
+After=multi-user.target
+
+[Service]
+Type=forking
+ExecStart=buitenlamp.py
+PIDFile=/var/run/buitenlamp.pid
+
+[Install]
+WantedBy=multi-user.target

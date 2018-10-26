@@ -1,0 +1,9 @@
+[Unit]
+Description=Oled scherm
+After=multi-user.target cresta.service slimmemeter.service
+
+[Timer]
+OnBootSec=1min
+
+[Install]
+WantedBy=multi-user.target

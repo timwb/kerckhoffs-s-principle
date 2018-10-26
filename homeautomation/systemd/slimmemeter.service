@@ -1,0 +1,9 @@
+[Unit]
+Description=Slimme meter daemon
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/local/share/timscripts/slmm.py -f
+
+[Install]
+WantedBy=multi-user.target

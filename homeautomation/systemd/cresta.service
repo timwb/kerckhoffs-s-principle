@@ -1,0 +1,10 @@
+[Unit]
+Description=Cresta 433MHz daemon
+After=multi-user.target
+
+[Service]
+ExecStartPre=/bin/sh -c "echo '{\"time\" : \"1970-01-01 00:00:01\", \"model\" : \"HIDEKI TS04 sensor\", \"rc\" : 7, \"channel\" : 1, \"battery\" : \"OK\", \"temperature_C\" : 0.0, \"humidity\" : 0}' > /dev/shm/cresta"
+ExecStart=/bin/bash -c "rtl_433 -p 26 -z 10 -x 225 -R 42 -F json -U | (while IFS='$$\\n' read -r line; do echo $${line} > /dev/shm/cresta; done)"
+
+[Install]
+WantedBy=multi-user.target

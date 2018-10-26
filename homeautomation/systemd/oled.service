@@ -1,0 +1,11 @@
+[Unit]
+Description=OLED scherm
+After=multi-user.target cresta.service slimmemeter.service
+
+[Service]
+Type=forking
+ExecStart=oled.py
+PIDFile=/var/run/oled.pid
+
+[Install]
+WantedBy=multi-user.target
