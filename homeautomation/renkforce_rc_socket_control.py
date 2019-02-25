@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# rpi_rf wrapper to control Renkforce / Conrad 433MHz RC wall sockets
+# rpi_rf wrapper to control Renkforce / Conrad 433MHz, RSL366R (Sunrom PT2272) based RC wall sockets
 # Remote + 2 Sockets:  p/n 1208454, EAN 4016138910049
 # Remote + 1 Socket:   p/n 1208455, EAN 4016138910063
 # Socket only:         p/n 1208457, EAN 4016138910087
